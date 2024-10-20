@@ -1,2 +1,2 @@
 # wiskunde.opmaat
-Latex broncode leermateriaal secundair onderwijs 
+LaTeX broncode van het open source project wiskunde.opmaat.org 8
