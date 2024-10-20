@@ -13,6 +13,8 @@
 .*.lb
 *.mtc
 
+*.dlog
+
 ## Intermediate documents:
 *.dvi
 *.xdv
@@ -287,6 +289,7 @@ ans*.tex
 
 *.svg
 *.png
+!pictures/*.png
 *.html
 *.sagetex.sage.py
 metadata.json
