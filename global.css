@@ -948,3 +948,45 @@ span.xmqa1 {
     /* width: 10cm; */
     display: inline-block;
 }
+
+
+
+
+
+# kleuren aanpassen 
+
+.main-title {
+    grid-area: title;
+    background-color: #526a80;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 10px;
+}
+
+
+.main-inhoud .toc-search {
+    grid-area: toc-head;
+    align-items: center;
+    display: flex;
+    background-color: white;
+}
+
+.toc-search .btn {
+    background: transparent;
+    color: #526a80;
+    padding: 0px 5px;
+}
+
+.toc .part {
+    font-size: larger;
+    background-color: #9cb3c0;
+}
+
+.toc .activity-card.active {
+    background-color: #383f47 !important;
+    color: white;
+    border-color: #292b2c;
+}
+
+
