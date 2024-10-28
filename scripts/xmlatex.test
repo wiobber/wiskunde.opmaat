@@ -282,8 +282,8 @@ then
           pdflatex -file-line-error -shell-escape "\\PassOptionsToClass{tikzexport}{ximera}\\PassOptionsToClass{xake}{ximera}\\PassOptionsToClass{xake}{xourse}\\nonstopmode\\input{$FILE}"
 
 # Option 'tikz+' : USE dvips  (and not dvisvg)
-    debug make4ht -s -c ximera -f html5+dvisvgm_hashes -u  -a debug $FILE "svg,htex4ht,mathjax,-css,info,tikz+" "" "" "--interaction=nonstopmode -shell-escape -file-line-error" 
-          make4ht -s -c ximera -f html5+dvisvgm_hashes -u  -a debug $FILE "svg,htex4ht,mathjax,-css,info,tikz+" "" "" "--interaction=nonstopmode -shell-escape -file-line-error" | tee $FILE.log
+    debug make4ht -s -c ximera -f html5 -u  -a debug $FILE "svg,htex4ht,mathjax,-css,info,tikz+" "" "" "--interaction=nonstopmode -shell-escape -file-line-error" 
+          make4ht -s -c ximera -f html5 -u  -a debug $FILE "svg,htex4ht,mathjax,-css,info,tikz+" "" "" "--interaction=nonstopmode -shell-escape -file-line-error" | tee $FILE.log
 #          make4ht -s -c ximera -f xhtml -u  -a debug $FILE "svg,htex4ht,mathjax,-css,info" "" "" "--interaction=nonstopmode -shell-escape -file-line-error" | tee $FILE.log
     # make4ht -s -c ximera -f xhtml+tidy -u  -a debug $FILE "svg,htex4ht, mathjax,-css,Gin-percent,info" "" "" "--interaction=nonstopmode -shell-escape -file-line-error" | tee $FILE.log
     # make4ht  $FILE "ximera,charset=utf-8,-css" "-cunihtf -utf8" "" "--interaction=nonstopmode -shell-escape -file-line-error"
@@ -313,14 +313,17 @@ then
 elif [[ "$COMMAND" == "bake" ]]
 then
     # files with beamer are IGNORED by bake and bakePdf   (should only be compiled to pdf, not html)
-    #  do it 'by hand' here
+    #  do it 'by hand' here, because they might be included as PDF in the HTML version
     reset_file_times
     mkdir -p ximera-downloads
-    echo "Copying gif files ..."
-    [[ -f pictures/*.gif ]] && cp pictures/*.gif ximera-downloads
+    if [[ -f pictures/*.gif ]]
+    then 
+        echo "Copying gif files ..."
+        cp pictures/*.gif ximera-downloads
+    fi
     echo "Compiling beamer and _pdf.tex files ..."
-        find \( -name "*beamer*.tex" -o -name "*_pdf.tex" \) -printf '%P\n' | while read file; do
-	ls -al ${file%tex}{tex,pdf,svg,log}
+    find \( -name "*beamer*.tex" -o -name "*_pdf.tex" \) -printf '%P\n' | while read file; do
+	    [[ -n "$DEBUG" ]] && ls -al ${file%tex}{tex,pdf,svg,log} 2>/dev/null
         if [[ "$file" -nt "${file/%.tex/.pdf}" ]]
         then
              echo "Compiling $file   (beamer)"
@@ -553,6 +556,10 @@ then
         echo "Changing ownership of all files in .git to $owner_group."
         chown -R "$owner_group" .git
     fi
+elif [[ "$COMMAND" == "setgitname" ]]
+then    
+    git config --global user.name "Xmlatex Xake"
+    git config --global user.email "xmlatex@xakecontainer"
 else
     # Hope that 'xake $*' was intended ...; if not, xake will complain.
     echo "Starting $XAKE $*"
