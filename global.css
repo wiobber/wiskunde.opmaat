@@ -987,3 +987,7 @@ span.xmqa1 {
 }
 
 
+img.brandlogo {
+    max-height: 6rem;
+    max-width: 20vw;
+}
