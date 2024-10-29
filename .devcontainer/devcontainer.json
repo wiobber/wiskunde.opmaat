@@ -12,19 +12,6 @@
           "requireLocalPort": true
         }
       },    
-    // "portsAttributes": {
-    //     "2000": {
-    //        "label": "XimeraServer",
-    //        "onAutoForward": "openBrowserOnce"
-    //      }
-    //    },    
-    // "otherPortsAttributes": {
-    //     "onAutoForward": "ignore",
-    // },
-       // "remoteEnv": {
-    //   "DEV_MODE": "true"
-    // },
-    // "remoteUser": "vscode",
     // "postStartCommand": "echo 'Ximera DevContainer started!'",
     "customizations": {
         // Configure properties specific to VS Code.
@@ -33,7 +20,8 @@
             "extensions": [
                 "james-yu.latex-workshop",
                 // "ritwickdey.liveserver",
-                "spencerwmiles.vscode-task-buttons"
+                "spencerwmiles.vscode-task-buttons",
+                "streetsidesoftware.code-spell-checker-dutch",
             ]
         }
     }
