@@ -726,12 +726,13 @@ and the close button is relative to .image-environment-modal
     object-fit: contain;
     max-height: calc(100% - 10px);
     max-width: calc(100% - 80px);
-    background: rgba(0, 0, 0, 0);
+    /* background: rgba(0, 0, 0, 0); */
 }
 
 .image-environment-modal-close {
     /* color: #f1f1f1; */
     color: black;
+	background: white;
 }
 
 .btn-info {
@@ -988,3 +989,7 @@ img.brandlogo {
 .main-inhoud .activity-title {
 	background-color: #526a80;
   }
+
+.main-inhoud .activity {
+	 overflow-y: hidden; 
+}
