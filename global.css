@@ -953,19 +953,12 @@ span.xmqa1 {
 
 
 .main-title {
-    grid-area: title;
     background-color: #526a80;
     color: white;
-    display: flex;
-    align-items: flex-end;
-    column-gap: 10px;
 }
 
 
 .main-inhoud .toc-search {
-    grid-area: toc-head;
-    align-items: center;
-    display: flex;
     background-color: white;
 }
 
@@ -991,3 +984,7 @@ img.brandlogo {
     max-height: 6rem;
     max-width: 20vw;
 }
+
+.main-inhoud .activity-title {
+	background-color: #526a80;
+  }
