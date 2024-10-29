@@ -17,9 +17,9 @@
 % Zo liggen de punten \((2,1)\), \((-2,2)\) en \((0,0)\) in het reële vlak. 
 % Het reële vlak wordt gekenmerkt de x-as en y-as die elkaar snijden in de oorsprong. 
 
-% de oosprong in vb koppels zetten en als 0 +0i? 
+% de oorsprong in vb koppels zetten en als 0 +0i? 
 
-Met complexe getallen kan je op op een nieuwe manier naar het vlak kijken. 
+Complexe getallen kan je beschouwen als een nieuwe manier om het reële vlak te bekijken. 
 \\
 Je weet al dat je door een $x$-as en een $y$-as in te voeren 
 elk punt van het vlak met behulp van coördinaten kan schrijven als \textbf{een koppel} \((a,b)\) reële getallen.
@@ -248,113 +248,77 @@ De getallen $42$ en $1+\pi$ zijn zuiver reële getallen, $42i$ is een zuiver ima
 \end{example}
 
 
-\begin{exercise} Geef telkens  het reëel en het imaginair deel van de volgende complexe getallen.
-	\begin{xmmulticols}
+\begin{exercise} Geef telkens het reëel en het imaginair deel van de volgende complexe getallen.
+	%\begin{xmmulticols}
+	\renewcommand{\xmFixFormatLength}{10ex}
+	\renewcommand{\xmFixFormatPosition}{c}
 	\begin{question}
-		\(8+3i\)
-		\begin{oplossing} \(\Re(8+3i) = 8\) en \(\Im(8+3i) = 3\)\end{oplossing}
+		\xmFixFormat{\(8+3i\)} heeft reëel deel $\answer{8}$ en imaginair deel $\answer{3}$. 
+		\begin{oplossing} 
+			Het reëel en imaginair deel van een complex getal vind je door het getal te schrijven in de vorm $a+bi$,
+			en dan is 
+			\(\Re(a+bi) = a\) en \(\Im(a+bi) = b\).
+
+			Hier wordt dat dus \(\Re(8+3i) = 8\) en \(\Im(8+3i) = 3\).
+		\end{oplossing}
 	\end{question}
 	
 	\begin{question}
-		\(\sqrt{2} + \sqrt{2}i\)
+		\xmFixFormat{\(\sqrt{2} - \sqrt{2}i\)} heeft reëel deel $\answer{\sqrt{2}}$ en imaginair deel $\answer{-\sqrt{2}}$. 
 	\end{question}
 	\begin{question}
-		\(7i\)
+		\xmFixFormat{\(7i\)} heeft reëel deel $\answer{0}$ en imaginair deel $\answer{7}$. 
 	\end{question}
 	\begin{question}
-		\(\frac{1+2i}{3}\)
+		\xmFixFormat{\(5\)} heeft reëel deel $\answer{5}$ en imaginair deel $\answer{0}$. 
 	\end{question}
 	\begin{question}
-		\(1\)
+		\xmFixFormat{\(5i-4\)} heeft reëel deel $\answer{-4}$ en imaginair deel $\answer{5}$. 
 	\end{question}
 	\begin{question}
-	\(i\)
+		\xmFixFormat{\(\frac{1+2i}{3}\)} heeft reëel deel $\answer{\frac{1}{3}}$ en imaginair deel $\answer{\frac{2}{3}}$. 
 	\end{question}
 	\begin{question}
-		\(\frac{9+3i}{3}\)
+		\xmFixFormat{\(i\)} heeft reëel deel $\answer{0}$ en imaginair deel $\answer{1}$. 
 	\end{question}
 	\begin{question}
-		\(\pi + e + i \)
+		\xmFixFormat{\(\frac{9+3i}{3}\)} heeft reëel deel $\answer{3}$ en imaginair deel $\answer{1}$. 
 	\end{question}
 	\begin{question}
-		\(0\)
+		\xmFixFormat{\(\pi + i + e\)} heeft reëel deel $\answer{\pi+e}$ en imaginair deel $\answer{1}$.
 	\end{question}
 	\begin{question}
-		\(\frac{\sqrt{5} + \sqrt{5}i }{\sqrt{5}}\)
+		\xmFixFormat{\(0\)} heeft reëel deel $\answer{0}$ en imaginair deel $\answer{0}$.
+	\end{question}
+	\begin{question}
+		\xmFixFormat{\(\frac{\sqrt{5} + \sqrt{5}i }{\sqrt{5}}\)} heeft reëel deel $\answer{1}$ en imaginair deel $\answer{1}$. 
 	\end{question}
 	
-	\end{xmmulticols}
+	%\end{xmmulticols}
 	
 \end{exercise}
 	
 \begin{exercise} Schrijf zo eenvoudig mogelijk, door gebruik te maken van de gelijkheid $i^2=-1$.
+	\renewcommand{\xmFixFormatLength}{3ex}
+	\renewcommand{\xmFixFormatPosition}{r}
+
 	\begin{xmmulticols}[5]
-	\begin{question}
-		\(i^2\)
-	\end{question}
-	\begin{question}
-		\(i^5\)
-	\end{question}
-	\begin{question}
-		\(-i^3\)
-	\end{question}
-	\begin{question}
-		\(i^4\)
-	\end{question}
-	\begin{question}
-		\(-i^4\)
-	\end{question}
-	\begin{question}
-		\(i^{10}\)
-	\end{question}
-	\begin{question}
-		\(i^{11}\)
-	\end{question}
-	\begin{question}
-		\(-i^{12}\)
-	\end{question}
-	\begin{question}
-		\(-i^2\)
-	\end{question}
-	\begin{question}
-		\(-i^3\)
-	\end{question}
+	\begin{question} \xmFixFormat{\( i^2\)}     = $\answer{-1}$	\end{question}
+	\begin{question} \xmFixFormat{\( i^5\)}     = $\answer{i}$	\end{question}
+	\begin{question} \xmFixFormat{\(-i^3\)}     = $\answer{i}$	\end{question}
+	\begin{question} \xmFixFormat{\( i^4\)}     = $\answer{-1}$	\end{question}
+	\begin{question} \xmFixFormat{\(-i^4\)}     = $\answer{-1}$	\end{question}
+	\begin{question} \xmFixFormat{\(i^{10}\)}   = $\answer{-1}$	\end{question}
+	\begin{question} \xmFixFormat{\(i^{11}\)}   = $\answer{-i}$	\end{question}
+	\begin{question} \xmFixFormat{\(i^{12}\)}   = $\answer{1}$	\end{question}
+	\begin{question} \xmFixFormat{\(-i^2\)}     = $\answer{1}$	\end{question}
+	\begin{question} \xmFixFormat{\(i^{2028}\)} = $\answer{1}$	\end{question}
 	\end{xmmulticols}
 \end{exercise}
 	
 % \begin{exercise}{Ga na of de volgende complexe getallen aan elkaar gelijk zijn.}
 % 	\begin{xmmulticols}
 	
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
-% 	\begin{question}
-% 		\(\) en \(\)
-% 	\end{question}
 % 	\begin{question}
 % 		\(\) en \(\)
 % 	\end{question}
