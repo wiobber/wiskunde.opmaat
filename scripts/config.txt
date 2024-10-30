@@ -13,8 +13,6 @@
 : "${XIMERA_NAME:=complexe-getallen}"
 ## : "${XIMERA_URL:=http://localhost:2000/}"
 ## : "${XIMERA_URL:=https://ximera.osu.edu}"
-## : "${XIMERA_URL:=https://set-p-dsb-zomercursus-latest.cloud-ext.icts.kuleuven.be/}"
-## : "${XIMERA_URL:=https://set.kuleuven.be/voorkennis/}"
 
 #
 # For a local ximeraserver
@@ -22,7 +20,7 @@
 
 : "${SERVER_PORT:=2000}"
 : "${SERVER_NAME:=ximeraserver}"
-: "${SERVER_IMAGE:=registry.gitlab.kuleuven.be/wet/ximera/ximeradocker:2.3_b}"
+: "${SERVER_IMAGE:=registry.gitlab.kuleuven.be/wet/ximera/ximeradocker:wom_b}"
 
 #
 # For testing/debugging

@@ -16,8 +16,7 @@
 % 201908/202301: PAS OP: babel en doclicense lijken problemen te veroorzaken in .jax bestand
 % (wegens syntax error met toegevoegde \newcommands ...)
 \pdfOnly{
-    \usepackage[hyperxmp=false,type={CC},modifier={by-nc-sa},version={4.0}]{doclicense}
-    % \usepackage[type={CC},modifier={by-nc-sa},version={4.0}]{doclicense}
+    \usepackage[type={CC},modifier={by-nc-sa},version={4.0}]{doclicense}
     \usepackage[dutch]{babel}
 }
 
@@ -1176,3 +1175,18 @@
 {%Env end code
 \xmdivEnvironmentEnd
 }
+
+
+
+
+% Proof-of-concept: e.g. to align multiple questions
+\providecommand{\xmFixFormatLength}{}   % default length
+\providecommand{\xmFixFormatPosition}{l}   % l;r;c
+\NewDocumentCommand{\xmFixFormat}{ O{\xmFixFormatLength} O{\xmFixFormatPosition} m }{\makebox[#1][#2]{#3}} 
+%\providecommand{\xmFixFormat}[3][\xmFixFormatLength][\xmFixFormatPosition]{\makebox[#1][#2]{#3}}   % default length
+\ifdefined\HCode
+    % TODO: put 'size' in data-attr, and use css class xmFixFormat to set width ... ?
+    \RenewDocumentCommand{\xmFixFormat}{ O{\xmFixFormatLength} O{\xmFixFormatPosition} m }
+    {\HCode{\Hnewline<span class="xmFixFormat" style="display: inline-block; width: }#1\HCode{;">\Hnewline}#3{\HCode{\Hnewline</span>\Hnewline}}}
+\fi
+
