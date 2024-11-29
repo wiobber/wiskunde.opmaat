@@ -688,6 +688,14 @@ main.activity {
 	margin-top: 1em;	
 }
 
+
+/* spacing langs de bovenkant groter  */
+.main-inhoud .activity {
+    padding: 20px 20px;
+} 
+
+
+
 /* cut long titles in nav menu */
 .main-nav .card {
     overflow: hidden;
